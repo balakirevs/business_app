@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password:
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: backend_proposal_microservice_api_development
+
+test:
+  <<: *default
+  database: backend_proposal_microservice_api_test
+
+production:
+  <<: *default
+  database: backend_proposal_microservice_api_production
+  username: backend_proposal_microservice_api
+  password: <%= ENV['BACKEND-PROPOSAL-MICROSERVICE-API_DATABASE_PASSWORD'] %>
