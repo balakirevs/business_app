@@ -12,5 +12,5 @@ $ cd backend-documents-microservice-api
 $ bundle exec rails db:create
 $ bundle exec rails db:migrate
 $ bundle exec rails db:setup
-$ rails s -p 3001
+$ rails s -p 3003
 ```
